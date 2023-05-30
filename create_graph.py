@@ -6,7 +6,7 @@ from shapely.geometry import Point
 
 #Connect to Neo4j
 graph = Graph("bolt://localhost:7687", auth=("neo4j", "12345678"))
-
+#
 
 
 #Queries to create nodes and relationships
@@ -11362,15 +11362,10 @@ def check_PLACE_0():
 
                 if ceara_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Ceará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Ceará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Ceará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Ceará")
                 else:
@@ -11378,15 +11373,10 @@ def check_PLACE_0():
 
                 if maranhao_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Maranhão" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Maranhão" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Maranhão" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Maranhão")
@@ -11395,15 +11385,10 @@ def check_PLACE_0():
 
                 if paraiba_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraíba" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraíba" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraíba" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Paraíba")
@@ -11412,15 +11397,10 @@ def check_PLACE_0():
 
                 if pernambuco_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pernambuco" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pernambuco" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pernambuco" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Pernambuco")
@@ -11429,15 +11409,10 @@ def check_PLACE_0():
 
                 if piaui_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Piauí" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Piauí" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Piauí" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Piauí")
                 else:
@@ -11445,15 +11420,10 @@ def check_PLACE_0():
 
                 if rio_g_norte_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Rio Grande do Norte")
@@ -11463,15 +11433,10 @@ def check_PLACE_0():
 
                 if sergipe_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Sergipe" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Sergipe" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Sergipe" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Sergipe")
@@ -11482,30 +11447,20 @@ def check_PLACE_0():
 
             if norte_polygon.contains(point):
                 # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                query = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
-                graph.run(query)
-=======
                 query1 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
                 query2 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (r)-[contains:REGION_CONTAINS]->(l)'
                 graph.run(query1)
                 graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                 print(f"Relationship created for {row['name']} with Norte")
 
                 # Check if the point is inside the States boundary polygon
                 if acre_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Acre" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Acre" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Acre" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Acre")
                 else:
@@ -11513,15 +11468,10 @@ def check_PLACE_0():
 
                 if amazonas_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amazonas" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amazonas" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amazonas" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Amazonas")
@@ -11530,15 +11480,10 @@ def check_PLACE_0():
 
                 if amapa_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amapá" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amapá" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amapá" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Amapá")
                 else:
@@ -11546,15 +11491,10 @@ def check_PLACE_0():
 
                 if rondonia_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rondônia" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rondônia" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rondônia" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Rondônia")
@@ -11563,15 +11503,10 @@ def check_PLACE_0():
 
                 if roraima_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Roraima" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Roraima" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Roraima" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Roraima")
@@ -11580,15 +11515,10 @@ def check_PLACE_0():
 
                 if tocantins_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Tocantins" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Tocantins" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Tocantins" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Tocantins")
@@ -11597,15 +11527,10 @@ def check_PLACE_0():
 
                 if para_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Pará")
                 else:
@@ -11615,29 +11540,19 @@ def check_PLACE_0():
 
             if sudeste_polygon.contains(point):
                 # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                query = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sudeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
-                graph.run(query)
-=======
                 query1 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sudeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
                 query2 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sudeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (r)-[contains:REGION_CONTAINS]->(l)'
                 graph.run(query1)
                 graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                 print(f"Relationship created for {row['name']} with Sudeste")
 
                 if espirito_santo_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Espírito Santo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Espírito Santo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Espírito Santo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Espírito Santo")
@@ -11647,15 +11562,10 @@ def check_PLACE_0():
 
                 if minas_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Minas Gerais" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Minas Gerais" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Minas Gerais" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Minas Gerais")
@@ -11665,15 +11575,10 @@ def check_PLACE_0():
 
                 if sao_paulo_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "São Paulo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "São Paulo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "São Paulo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with São Paulo")
@@ -11682,15 +11587,10 @@ def check_PLACE_0():
 
                 if rio_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio de Janeiro" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio de Janeiro" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio de Janeiro" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Rio de Janeiro")
@@ -11703,29 +11603,19 @@ def check_PLACE_0():
 
             if sul_polygon.contains(point):
                 # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                query = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
-                graph.run(query)
-=======
                 query1 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
                 query2 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (r)-[contains:REGION_CONTAINS]->(l)'
                 graph.run(query1)
                 graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                 print(f"Relationship created for {row['name']} with Sul")
 
                 if rio_g_sul_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Rio Grande do Sul")
@@ -11735,15 +11625,10 @@ def check_PLACE_0():
 
                 if parana_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraná" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraná" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraná" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Paraná")
@@ -11752,15 +11637,10 @@ def check_PLACE_0():
 
                 if santa_catarina_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Santa Catarina" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Santa Catarina" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Santa Catarina" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Santa Catarina")
@@ -11773,30 +11653,20 @@ def check_PLACE_0():
 
             if centro_oeste_polygon.contains(point):
                 # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                query = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Centro-Oeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
-                graph.run(query)
-=======
                 query1 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Centro-Oeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
                 query2 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Centro-Oeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (r)-[contains:REGION_CONTAINS]->(l)'
                 graph.run(query1)
                 graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                 print(
                     f"Relationship created for {row['name']} with Centro-Oeste")
 
                 if goias_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Goiás" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Goiás" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Goiás" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Goiás")
                 else:
@@ -11804,15 +11674,10 @@ def check_PLACE_0():
 
                 if mato_sul_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Mato Grosso do Sul")
@@ -11822,15 +11687,10 @@ def check_PLACE_0():
 
                 if mato_grosso_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Mato Grosso")
@@ -11840,15 +11700,10 @@ def check_PLACE_0():
 
                 if distrito_federal_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Distrito Federal" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Distrito Federal" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Distrito Federal" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Distrito Federal")
@@ -11860,11 +11715,7 @@ def check_PLACE_0():
                 print(f"{row['name']} don't match with Centro-Oeste:", point)
         else:
             print(f"{row['name']} don't match with Brazil:", point)
-<<<<<<< HEAD
-# check_PLACE_0()
-=======
 #check_PLACE_0()
->>>>>>> 29e17f6 (Relationship 'contains')
 
 def check_PLACE_1():
     # Load the CSV file with location data
@@ -12015,44 +11866,29 @@ def check_PLACE_1():
         # Check if the point is inside the Brazil boundary polygon
         if brazil_polygon.contains(point):
             # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-            query = f'MATCH(b:BRAZIL), (l:PLACE) WHERE b.name = "Brasil" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_COUNTRY]->(b)'
-            graph.run(query)
-=======
             query1 = f'MATCH(b:BRAZIL), (l:PLACE) WHERE b.name = "Brasil" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_COUNTRY]->(b)'
             query2 = f'MATCH(b:BRAZIL), (l:PLACE) WHERE b.name = "Brasil" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (b)-[isin:COUNTRY_CONTAINS]->(l)'
             graph.run(query1)
             graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
             print(f"Relationship created for {row['name']} with Brazil")
 
             # Check if the point is inside the Regions and States boundary polygon
             if nordeste_polygon.contains(point):
                 # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                query = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Nordeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
-                graph.run(query)
-=======
                 query1 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Nordeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
                 query2 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Nordeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (r)-[isin:REGION_CONTAINS]->(l)'
                 graph.run(query1)
                 graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                 print(f"Relationship created for {row['name']} with Nordeste")
 
                 if alagoas_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Alagoas" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Alagoas" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Alagoas" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Alagoas")
@@ -12061,15 +11897,10 @@ def check_PLACE_1():
 
                 if bahia_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Bahia" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Bahia" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Bahia" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Bahia")
                 else:
@@ -12077,15 +11908,10 @@ def check_PLACE_1():
 
                 if ceara_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Ceará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Ceará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Ceará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Ceará")
                 else:
@@ -12093,15 +11919,10 @@ def check_PLACE_1():
 
                 if maranhao_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Maranhão" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Maranhão" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Maranhão" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Maranhão")
@@ -12110,15 +11931,10 @@ def check_PLACE_1():
 
                 if paraiba_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraíba" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraíba" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraíba" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Paraíba")
@@ -12127,15 +11943,10 @@ def check_PLACE_1():
 
                 if pernambuco_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pernambuco" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pernambuco" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pernambuco" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Pernambuco")
@@ -12144,15 +11955,10 @@ def check_PLACE_1():
 
                 if piaui_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Piauí" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Piauí" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Piauí" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Piauí")
                 else:
@@ -12160,15 +11966,10 @@ def check_PLACE_1():
 
                 if rio_g_norte_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Rio Grande do Norte")
@@ -12178,15 +11979,10 @@ def check_PLACE_1():
 
                 if sergipe_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Sergipe" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Sergipe" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Sergipe" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Sergipe")
@@ -12197,30 +11993,20 @@ def check_PLACE_1():
 
             if norte_polygon.contains(point):
                 # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                query = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
-                graph.run(query)
-=======
                 query1 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
                 query2 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (r)-[contains:REGION_CONTAINS]->(l)'
                 graph.run(query1)
                 graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                 print(f"Relationship created for {row['name']} with Norte")
 
                 # Check if the point is inside the States boundary polygon
                 if acre_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Acre" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Acre" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Acre" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Acre")
                 else:
@@ -12228,15 +12014,10 @@ def check_PLACE_1():
 
                 if amazonas_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amazonas" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amazonas" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amazonas" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Amazonas")
@@ -12245,15 +12026,10 @@ def check_PLACE_1():
 
                 if amapa_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amapá" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amapá" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amapá" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Amapá")
                 else:
@@ -12261,15 +12037,10 @@ def check_PLACE_1():
 
                 if rondonia_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rondônia" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rondônia" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rondônia" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Rondônia")
@@ -12278,15 +12049,10 @@ def check_PLACE_1():
 
                 if roraima_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Roraima" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Roraima" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Roraima" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Roraima")
@@ -12295,15 +12061,10 @@ def check_PLACE_1():
 
                 if tocantins_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Tocantins" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Tocantins" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Tocantins" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Tocantins")
@@ -12312,15 +12073,10 @@ def check_PLACE_1():
 
                 if para_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Pará")
                 else:
@@ -12330,29 +12086,19 @@ def check_PLACE_1():
 
             if sudeste_polygon.contains(point):
                 # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                query = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sudeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
-                graph.run(query)
-=======
                 query1 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sudeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
                 query2 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sudeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (r)-[contains:REGION_CONTAINS]->(l)'
                 graph.run(query1)
                 graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                 print(f"Relationship created for {row['name']} with Sudeste")
 
                 if espirito_santo_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Espírito Santo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Espírito Santo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Espírito Santo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Espírito Santo")
@@ -12362,15 +12108,10 @@ def check_PLACE_1():
 
                 if minas_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Minas Gerais" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Minas Gerais" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Minas Gerais" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Minas Gerais")
@@ -12380,15 +12121,10 @@ def check_PLACE_1():
 
                 if sao_paulo_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "São Paulo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "São Paulo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "São Paulo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with São Paulo")
@@ -12397,15 +12133,10 @@ def check_PLACE_1():
 
                 if rio_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio de Janeiro" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio de Janeiro" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio de Janeiro" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Rio de Janeiro")
@@ -12418,29 +12149,19 @@ def check_PLACE_1():
 
             if sul_polygon.contains(point):
                 # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                query = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
-                graph.run(query)
-=======
                 query1 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
                 query2 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (r)-[contains:REGION_CONTAINS]->(l)'
                 graph.run(query1)
                 graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                 print(f"Relationship created for {row['name']} with Sul")
 
                 if rio_g_sul_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Rio Grande do Sul")
@@ -12450,15 +12171,10 @@ def check_PLACE_1():
 
                 if parana_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraná" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraná" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraná" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Paraná")
@@ -12467,15 +12183,10 @@ def check_PLACE_1():
 
                 if santa_catarina_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Santa Catarina" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Santa Catarina" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Santa Catarina" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Santa Catarina")
@@ -12488,30 +12199,20 @@ def check_PLACE_1():
 
             if centro_oeste_polygon.contains(point):
                 # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                query = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Centro-Oeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
-                graph.run(query)
-=======
                 query1 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Centro-Oeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
                 query2 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Centro-Oeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (r)-[contains:REGION_CONTAINS]->(l)'
                 graph.run(query1)
                 graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                 print(
                     f"Relationship created for {row['name']} with Centro-Oeste")
 
                 if goias_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Goiás" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Goiás" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Goiás" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Goiás")
                 else:
@@ -12519,15 +12220,10 @@ def check_PLACE_1():
 
                 if mato_sul_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Mato Grosso do Sul")
@@ -12537,15 +12233,10 @@ def check_PLACE_1():
 
                 if mato_grosso_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Mato Grosso")
@@ -12555,15 +12246,10 @@ def check_PLACE_1():
 
                 if distrito_federal_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Distrito Federal" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Distrito Federal" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Distrito Federal" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Distrito Federal")
@@ -12575,11 +12261,7 @@ def check_PLACE_1():
                 print(f"{row['name']} don't match with Centro-Oeste:", point)
         else:
             print(f"{row['name']} don't match with Brazil:", point)
-<<<<<<< HEAD
-# check_PLACE_1()
-=======
 #check_PLACE_1()
->>>>>>> 29e17f6 (Relationship 'contains')
 
 def check_PLACE_2():
     # Load the CSV file with location data
@@ -12719,11 +12401,7 @@ def check_PLACE_2():
         tocantins_polygon = loads(wkt_data)
 
     # Loop through each row in the CSV file
-<<<<<<< HEAD
-    for index, row in df.iterrows():
-=======
     for row in df.iterrows():
->>>>>>> 29e17f6 (Relationship 'contains')
         # Extract latitude and longitude values from the CSV data
         latitude = row["latitude"]
         longitude = row["longitude"]
@@ -12734,44 +12412,29 @@ def check_PLACE_2():
         # Check if the point is inside the Brazil boundary polygon
         if brazil_polygon.contains(point):
             # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-            query = f'MATCH(b:BRAZIL), (l:PLACE) WHERE b.name = "Brasil" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_COUNTRY]->(b)'
-            graph.run(query)
-=======
             query1 = f'MATCH(b:BRAZIL), (l:PLACE) WHERE b.name = "Brasil" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_COUNTRY]->(b)'
             query2 = f'MATCH(b:BRAZIL), (l:PLACE) WHERE b.name = "Brasil" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (b)-[isin:COUNTRY_CONTAINS]->(l)'
             graph.run(query1)
             graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
             print(f"Relationship created for {row['name']} with Brazil")
 
             # Check if the point is inside the Regions and States boundary polygon
             if nordeste_polygon.contains(point):
                 # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                query = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Nordeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
-                graph.run(query)
-=======
                 query1 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Nordeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
                 query2 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Nordeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (r)-[isin:REGION_CONTAINS]->(l)'
                 graph.run(query1)
                 graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                 print(f"Relationship created for {row['name']} with Nordeste")
 
                 if alagoas_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Alagoas" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Alagoas" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Alagoas" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Alagoas")
@@ -12780,15 +12443,10 @@ def check_PLACE_2():
 
                 if bahia_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Bahia" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Bahia" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Bahia" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Bahia")
                 else:
@@ -12796,15 +12454,10 @@ def check_PLACE_2():
 
                 if ceara_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Ceará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Ceará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Ceará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Ceará")
                 else:
@@ -12812,15 +12465,10 @@ def check_PLACE_2():
 
                 if maranhao_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Maranhão" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Maranhão" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Maranhão" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Maranhão")
@@ -12829,15 +12477,10 @@ def check_PLACE_2():
 
                 if paraiba_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraíba" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraíba" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraíba" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Paraíba")
@@ -12846,15 +12489,10 @@ def check_PLACE_2():
 
                 if pernambuco_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pernambuco" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pernambuco" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pernambuco" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Pernambuco")
@@ -12863,15 +12501,10 @@ def check_PLACE_2():
 
                 if piaui_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Piauí" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Piauí" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Piauí" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Piauí")
                 else:
@@ -12879,15 +12512,10 @@ def check_PLACE_2():
 
                 if rio_g_norte_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Rio Grande do Norte")
@@ -12897,15 +12525,10 @@ def check_PLACE_2():
 
                 if sergipe_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Sergipe" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Sergipe" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Sergipe" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Sergipe")
@@ -12916,30 +12539,20 @@ def check_PLACE_2():
 
             if norte_polygon.contains(point):
                 # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                query = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
-                graph.run(query)
-=======
                 query1 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
                 query2 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (r)-[contains:REGION_CONTAINS]->(l)'
                 graph.run(query1)
                 graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                 print(f"Relationship created for {row['name']} with Norte")
 
                 # Check if the point is inside the States boundary polygon
                 if acre_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Acre" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Acre" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Acre" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Acre")
                 else:
@@ -12947,15 +12560,10 @@ def check_PLACE_2():
 
                 if amazonas_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amazonas" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amazonas" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amazonas" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Amazonas")
@@ -12964,15 +12572,10 @@ def check_PLACE_2():
 
                 if amapa_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amapá" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amapá" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amapá" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Amapá")
                 else:
@@ -12980,15 +12583,10 @@ def check_PLACE_2():
 
                 if rondonia_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rondônia" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rondônia" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rondônia" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Rondônia")
@@ -12997,15 +12595,10 @@ def check_PLACE_2():
 
                 if roraima_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Roraima" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Roraima" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Roraima" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Roraima")
@@ -13014,15 +12607,10 @@ def check_PLACE_2():
 
                 if tocantins_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Tocantins" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Tocantins" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Tocantins" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Tocantins")
@@ -13031,15 +12619,10 @@ def check_PLACE_2():
 
                 if para_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Pará")
                 else:
@@ -13049,29 +12632,19 @@ def check_PLACE_2():
 
             if sudeste_polygon.contains(point):
                 # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                query = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sudeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
-                graph.run(query)
-=======
                 query1 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sudeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
                 query2 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sudeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (r)-[contains:REGION_CONTAINS]->(l)'
                 graph.run(query1)
                 graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                 print(f"Relationship created for {row['name']} with Sudeste")
 
                 if espirito_santo_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Espírito Santo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Espírito Santo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Espírito Santo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Espírito Santo")
@@ -13081,15 +12654,10 @@ def check_PLACE_2():
 
                 if minas_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Minas Gerais" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Minas Gerais" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Minas Gerais" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Minas Gerais")
@@ -13099,15 +12667,10 @@ def check_PLACE_2():
 
                 if sao_paulo_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "São Paulo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "São Paulo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "São Paulo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with São Paulo")
@@ -13116,15 +12679,10 @@ def check_PLACE_2():
 
                 if rio_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio de Janeiro" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio de Janeiro" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio de Janeiro" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Rio de Janeiro")
@@ -13137,29 +12695,19 @@ def check_PLACE_2():
 
             if sul_polygon.contains(point):
                 # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                query = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
-                graph.run(query)
-=======
                 query1 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
                 query2 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (r)-[contains:REGION_CONTAINS]->(l)'
                 graph.run(query1)
                 graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                 print(f"Relationship created for {row['name']} with Sul")
 
                 if rio_g_sul_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Rio Grande do Sul")
@@ -13169,15 +12717,10 @@ def check_PLACE_2():
 
                 if parana_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraná" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraná" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraná" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Paraná")
@@ -13186,15 +12729,10 @@ def check_PLACE_2():
 
                 if santa_catarina_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Santa Catarina" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Santa Catarina" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Santa Catarina" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Santa Catarina")
@@ -13207,30 +12745,20 @@ def check_PLACE_2():
 
             if centro_oeste_polygon.contains(point):
                 # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                query = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Centro-Oeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
-                graph.run(query)
-=======
                 query1 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Centro-Oeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
                 query2 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Centro-Oeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (r)-[contains:REGION_CONTAINS]->(l)'
                 graph.run(query1)
                 graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                 print(
                     f"Relationship created for {row['name']} with Centro-Oeste")
 
                 if goias_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Goiás" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Goiás" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Goiás" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Goiás")
                 else:
@@ -13238,15 +12766,10 @@ def check_PLACE_2():
 
                 if mato_sul_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Mato Grosso do Sul")
@@ -13256,15 +12779,10 @@ def check_PLACE_2():
 
                 if mato_grosso_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Mato Grosso")
@@ -13274,15 +12792,10 @@ def check_PLACE_2():
 
                 if distrito_federal_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Distrito Federal" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Distrito Federal" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Distrito Federal" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Distrito Federal")
@@ -13294,11 +12807,7 @@ def check_PLACE_2():
                 print(f"{row['name']} don't match with Centro-Oeste:", point)
         else:
             print(f"{row['name']} don't match with Brazil:", point)
-<<<<<<< HEAD
-# check_PLACE_2()
-=======
 #check_PLACE_2()
->>>>>>> 29e17f6 (Relationship 'contains')
 
 def check_PLACE_3():
     # Load the CSV file with location data
@@ -13438,11 +12947,7 @@ def check_PLACE_3():
         tocantins_polygon = loads(wkt_data)
 
     # Loop through each row in the CSV file
-<<<<<<< HEAD
-    for index, row in df.iterrows():
-=======
     for row in df.iterrows():
->>>>>>> 29e17f6 (Relationship 'contains')
         # Extract latitude and longitude values from the CSV data
         latitude = row["latitude"]
         longitude = row["longitude"]
@@ -13453,44 +12958,29 @@ def check_PLACE_3():
         # Check if the point is inside the Brazil boundary polygon
         if brazil_polygon.contains(point):
             # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-            query = f'MATCH(b:BRAZIL), (l:PLACE) WHERE b.name = "Brasil" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_COUNTRY]->(b)'
-            graph.run(query)
-=======
             query1 = f'MATCH(b:BRAZIL), (l:PLACE) WHERE b.name = "Brasil" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_COUNTRY]->(b)'
             query2 = f'MATCH(b:BRAZIL), (l:PLACE) WHERE b.name = "Brasil" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (b)-[isin:COUNTRY_CONTAINS]->(l)'
             graph.run(query1)
             graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
             print(f"Relationship created for {row['name']} with Brazil")
 
             # Check if the point is inside the Regions and States boundary polygon
             if nordeste_polygon.contains(point):
                 # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                query = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Nordeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
-                graph.run(query)
-=======
                 query1 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Nordeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
                 query2 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Nordeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (r)-[isin:REGION_CONTAINS]->(l)'
                 graph.run(query1)
                 graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                 print(f"Relationship created for {row['name']} with Nordeste")
 
                 if alagoas_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Alagoas" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Alagoas" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Alagoas" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Alagoas")
@@ -13499,15 +12989,10 @@ def check_PLACE_3():
 
                 if bahia_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Bahia" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Bahia" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Bahia" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Bahia")
                 else:
@@ -13515,15 +13000,10 @@ def check_PLACE_3():
 
                 if ceara_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Ceará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Ceará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Ceará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Ceará")
                 else:
@@ -13531,15 +13011,10 @@ def check_PLACE_3():
 
                 if maranhao_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Maranhão" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Maranhão" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Maranhão" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Maranhão")
@@ -13548,15 +13023,10 @@ def check_PLACE_3():
 
                 if paraiba_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraíba" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraíba" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraíba" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Paraíba")
@@ -13565,15 +13035,10 @@ def check_PLACE_3():
 
                 if pernambuco_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pernambuco" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pernambuco" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pernambuco" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Pernambuco")
@@ -13582,15 +13047,10 @@ def check_PLACE_3():
 
                 if piaui_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Piauí" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Piauí" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Piauí" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Piauí")
                 else:
@@ -13598,15 +13058,10 @@ def check_PLACE_3():
 
                 if rio_g_norte_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Rio Grande do Norte")
@@ -13616,15 +13071,10 @@ def check_PLACE_3():
 
                 if sergipe_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Sergipe" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Sergipe" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Sergipe" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Sergipe")
@@ -13635,30 +13085,20 @@ def check_PLACE_3():
 
             if norte_polygon.contains(point):
                 # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                query = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
-                graph.run(query)
-=======
                 query1 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
                 query2 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (r)-[contains:REGION_CONTAINS]->(l)'
                 graph.run(query1)
                 graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                 print(f"Relationship created for {row['name']} with Norte")
 
                 # Check if the point is inside the States boundary polygon
                 if acre_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Acre" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Acre" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Acre" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Acre")
                 else:
@@ -13666,15 +13106,10 @@ def check_PLACE_3():
 
                 if amazonas_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amazonas" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amazonas" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amazonas" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Amazonas")
@@ -13683,15 +13118,10 @@ def check_PLACE_3():
 
                 if amapa_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amapá" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amapá" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amapá" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Amapá")
                 else:
@@ -13699,15 +13129,10 @@ def check_PLACE_3():
 
                 if rondonia_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rondônia" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rondônia" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rondônia" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Rondônia")
@@ -13716,15 +13141,10 @@ def check_PLACE_3():
 
                 if roraima_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Roraima" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Roraima" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Roraima" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Roraima")
@@ -13733,15 +13153,10 @@ def check_PLACE_3():
 
                 if tocantins_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Tocantins" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Tocantins" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Tocantins" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Tocantins")
@@ -13750,15 +13165,10 @@ def check_PLACE_3():
 
                 if para_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Pará")
                 else:
@@ -13768,29 +13178,19 @@ def check_PLACE_3():
 
             if sudeste_polygon.contains(point):
                 # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                query = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sudeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
-                graph.run(query)
-=======
                 query1 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sudeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
                 query2 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sudeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (r)-[contains:REGION_CONTAINS]->(l)'
                 graph.run(query1)
                 graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                 print(f"Relationship created for {row['name']} with Sudeste")
 
                 if espirito_santo_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Espírito Santo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Espírito Santo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Espírito Santo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Espírito Santo")
@@ -13800,15 +13200,10 @@ def check_PLACE_3():
 
                 if minas_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Minas Gerais" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Minas Gerais" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Minas Gerais" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Minas Gerais")
@@ -13818,15 +13213,10 @@ def check_PLACE_3():
 
                 if sao_paulo_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "São Paulo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "São Paulo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "São Paulo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with São Paulo")
@@ -13835,15 +13225,10 @@ def check_PLACE_3():
 
                 if rio_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio de Janeiro" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio de Janeiro" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio de Janeiro" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Rio de Janeiro")
@@ -13856,29 +13241,19 @@ def check_PLACE_3():
 
             if sul_polygon.contains(point):
                 # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                query = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
-                graph.run(query)
-=======
                 query1 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
                 query2 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (r)-[contains:REGION_CONTAINS]->(l)'
                 graph.run(query1)
                 graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                 print(f"Relationship created for {row['name']} with Sul")
 
                 if rio_g_sul_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Rio Grande do Sul")
@@ -13888,15 +13263,10 @@ def check_PLACE_3():
 
                 if parana_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraná" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraná" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraná" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Paraná")
@@ -13905,15 +13275,10 @@ def check_PLACE_3():
 
                 if santa_catarina_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Santa Catarina" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Santa Catarina" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Santa Catarina" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Santa Catarina")
@@ -13926,30 +13291,20 @@ def check_PLACE_3():
 
             if centro_oeste_polygon.contains(point):
                 # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                query = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Centro-Oeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
-                graph.run(query)
-=======
                 query1 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Centro-Oeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
                 query2 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Centro-Oeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (r)-[contains:REGION_CONTAINS]->(l)'
                 graph.run(query1)
                 graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                 print(
                     f"Relationship created for {row['name']} with Centro-Oeste")
 
                 if goias_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Goiás" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Goiás" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Goiás" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Goiás")
                 else:
@@ -13957,15 +13312,10 @@ def check_PLACE_3():
 
                 if mato_sul_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Mato Grosso do Sul")
@@ -13975,15 +13325,10 @@ def check_PLACE_3():
 
                 if mato_grosso_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Mato Grosso")
@@ -13993,15 +13338,10 @@ def check_PLACE_3():
 
                 if distrito_federal_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Distrito Federal" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Distrito Federal" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Distrito Federal" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Distrito Federal")
@@ -14013,11 +13353,7 @@ def check_PLACE_3():
                 print(f"{row['name']} don't match with Centro-Oeste:", point)
         else:
             print(f"{row['name']} don't match with Brazil:", point)
-<<<<<<< HEAD
-check_PLACE_3()
-=======
 #check_PLACE_3()
->>>>>>> 29e17f6 (Relationship 'contains')
 
 def check_PLACE_4():
     # Load the CSV file with location data
@@ -14157,11 +13493,7 @@ def check_PLACE_4():
         tocantins_polygon = loads(wkt_data)
 
     # Loop through each row in the CSV file
-<<<<<<< HEAD
-    for index, row in df.iterrows():
-=======
     for row in df.iterrows():
->>>>>>> 29e17f6 (Relationship 'contains')
         # Extract latitude and longitude values from the CSV data
         latitude = row["latitude"]
         longitude = row["longitude"]
@@ -14172,44 +13504,29 @@ def check_PLACE_4():
         # Check if the point is inside the Brazil boundary polygon
         if brazil_polygon.contains(point):
             # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-            query = f'MATCH(b:BRAZIL), (l:PLACE) WHERE b.name = "Brasil" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_COUNTRY]->(b)'
-            graph.run(query)
-=======
             query1 = f'MATCH(b:BRAZIL), (l:PLACE) WHERE b.name = "Brasil" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_COUNTRY]->(b)'
             query2 = f'MATCH(b:BRAZIL), (l:PLACE) WHERE b.name = "Brasil" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (b)-[isin:COUNTRY_CONTAINS]->(l)'
             graph.run(query1)
             graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
             print(f"Relationship created for {row['name']} with Brazil")
 
             # Check if the point is inside the Regions and States boundary polygon
             if nordeste_polygon.contains(point):
                 # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                query = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Nordeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
-                graph.run(query)
-=======
                 query1 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Nordeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
                 query2 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Nordeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (r)-[isin:REGION_CONTAINS]->(l)'
                 graph.run(query1)
                 graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                 print(f"Relationship created for {row['name']} with Nordeste")
 
                 if alagoas_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Alagoas" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Alagoas" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Alagoas" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Alagoas")
@@ -14218,15 +13535,10 @@ def check_PLACE_4():
 
                 if bahia_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Bahia" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Bahia" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Bahia" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Bahia")
                 else:
@@ -14234,15 +13546,10 @@ def check_PLACE_4():
 
                 if ceara_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Ceará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Ceará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Ceará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Ceará")
                 else:
@@ -14250,15 +13557,10 @@ def check_PLACE_4():
 
                 if maranhao_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Maranhão" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Maranhão" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Maranhão" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Maranhão")
@@ -14267,15 +13569,10 @@ def check_PLACE_4():
 
                 if paraiba_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraíba" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraíba" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraíba" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Paraíba")
@@ -14284,15 +13581,10 @@ def check_PLACE_4():
 
                 if pernambuco_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pernambuco" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pernambuco" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pernambuco" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Pernambuco")
@@ -14301,15 +13593,10 @@ def check_PLACE_4():
 
                 if piaui_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Piauí" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Piauí" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Piauí" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Piauí")
                 else:
@@ -14317,15 +13604,10 @@ def check_PLACE_4():
 
                 if rio_g_norte_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Rio Grande do Norte")
@@ -14335,15 +13617,10 @@ def check_PLACE_4():
 
                 if sergipe_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Sergipe" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Sergipe" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Sergipe" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Sergipe")
@@ -14354,30 +13631,20 @@ def check_PLACE_4():
 
             if norte_polygon.contains(point):
                 # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                query = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
-                graph.run(query)
-=======
                 query1 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
                 query2 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (r)-[contains:REGION_CONTAINS]->(l)'
                 graph.run(query1)
                 graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                 print(f"Relationship created for {row['name']} with Norte")
 
                 # Check if the point is inside the States boundary polygon
                 if acre_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Acre" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Acre" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Acre" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Acre")
                 else:
@@ -14385,15 +13652,10 @@ def check_PLACE_4():
 
                 if amazonas_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amazonas" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amazonas" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amazonas" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Amazonas")
@@ -14402,15 +13664,10 @@ def check_PLACE_4():
 
                 if amapa_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amapá" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amapá" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amapá" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Amapá")
                 else:
@@ -14418,15 +13675,10 @@ def check_PLACE_4():
 
                 if rondonia_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rondônia" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rondônia" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rondônia" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Rondônia")
@@ -14435,15 +13687,10 @@ def check_PLACE_4():
 
                 if roraima_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Roraima" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Roraima" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Roraima" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Roraima")
@@ -14452,15 +13699,10 @@ def check_PLACE_4():
 
                 if tocantins_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Tocantins" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Tocantins" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Tocantins" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Tocantins")
@@ -14469,15 +13711,10 @@ def check_PLACE_4():
 
                 if para_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Pará")
                 else:
@@ -14487,29 +13724,19 @@ def check_PLACE_4():
 
             if sudeste_polygon.contains(point):
                 # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                query = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sudeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
-                graph.run(query)
-=======
                 query1 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sudeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
                 query2 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sudeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (r)-[contains:REGION_CONTAINS]->(l)'
                 graph.run(query1)
                 graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                 print(f"Relationship created for {row['name']} with Sudeste")
 
                 if espirito_santo_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Espírito Santo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Espírito Santo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Espírito Santo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Espírito Santo")
@@ -14519,15 +13746,10 @@ def check_PLACE_4():
 
                 if minas_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Minas Gerais" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Minas Gerais" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Minas Gerais" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Minas Gerais")
@@ -14537,15 +13759,10 @@ def check_PLACE_4():
 
                 if sao_paulo_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "São Paulo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "São Paulo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "São Paulo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with São Paulo")
@@ -14554,15 +13771,10 @@ def check_PLACE_4():
 
                 if rio_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio de Janeiro" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio de Janeiro" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio de Janeiro" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Rio de Janeiro")
@@ -14575,29 +13787,19 @@ def check_PLACE_4():
 
             if sul_polygon.contains(point):
                 # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                query = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
-                graph.run(query)
-=======
                 query1 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
                 query2 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (r)-[contains:REGION_CONTAINS]->(l)'
                 graph.run(query1)
                 graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                 print(f"Relationship created for {row['name']} with Sul")
 
                 if rio_g_sul_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Rio Grande do Sul")
@@ -14607,15 +13809,10 @@ def check_PLACE_4():
 
                 if parana_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraná" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraná" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraná" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Paraná")
@@ -14624,15 +13821,10 @@ def check_PLACE_4():
 
                 if santa_catarina_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Santa Catarina" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Santa Catarina" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Santa Catarina" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Santa Catarina")
@@ -14645,30 +13837,20 @@ def check_PLACE_4():
 
             if centro_oeste_polygon.contains(point):
                 # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                query = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Centro-Oeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
-                graph.run(query)
-=======
                 query1 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Centro-Oeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
                 query2 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Centro-Oeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (r)-[contains:REGION_CONTAINS]->(l)'
                 graph.run(query1)
                 graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                 print(
                     f"Relationship created for {row['name']} with Centro-Oeste")
 
                 if goias_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Goiás" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Goiás" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Goiás" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Goiás")
                 else:
@@ -14676,15 +13858,10 @@ def check_PLACE_4():
 
                 if mato_sul_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Mato Grosso do Sul")
@@ -14694,15 +13871,10 @@ def check_PLACE_4():
 
                 if mato_grosso_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Mato Grosso")
@@ -14712,15 +13884,10 @@ def check_PLACE_4():
 
                 if distrito_federal_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Distrito Federal" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Distrito Federal" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Distrito Federal" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Distrito Federal")
@@ -14732,11 +13899,7 @@ def check_PLACE_4():
                 print(f"{row['name']} don't match with Centro-Oeste:", point)
         else:
             print(f"{row['name']} don't match with Brazil:", point)
-<<<<<<< HEAD
-# check_PLACE_4()
-=======
 #check_PLACE_4()
->>>>>>> 29e17f6 (Relationship 'contains')
 
 def check_PLACE_5():
     # Load the CSV file with location data
@@ -14876,11 +14039,7 @@ def check_PLACE_5():
         tocantins_polygon = loads(wkt_data)
 
     # Loop through each row in the CSV file
-<<<<<<< HEAD
-    for index, row in df.iterrows():
-=======
     for row in df.iterrows():
->>>>>>> 29e17f6 (Relationship 'contains')
         # Extract latitude and longitude values from the CSV data
         latitude = row["latitude"]
         longitude = row["longitude"]
@@ -14891,44 +14050,29 @@ def check_PLACE_5():
         # Check if the point is inside the Brazil boundary polygon
         if brazil_polygon.contains(point):
             # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-            query = f'MATCH(b:BRAZIL), (l:PLACE) WHERE b.name = "Brasil" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_COUNTRY]->(b)'
-            graph.run(query)
-=======
             query1 = f'MATCH(b:BRAZIL), (l:PLACE) WHERE b.name = "Brasil" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_COUNTRY]->(b)'
             query2 = f'MATCH(b:BRAZIL), (l:PLACE) WHERE b.name = "Brasil" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (b)-[isin:COUNTRY_CONTAINS]->(l)'
             graph.run(query1)
             graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
             print(f"Relationship created for {row['name']} with Brazil")
 
             # Check if the point is inside the Regions and States boundary polygon
             if nordeste_polygon.contains(point):
                 # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                query = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Nordeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
-                graph.run(query)
-=======
                 query1 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Nordeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
                 query2 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Nordeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (r)-[isin:REGION_CONTAINS]->(l)'
                 graph.run(query1)
                 graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                 print(f"Relationship created for {row['name']} with Nordeste")
 
                 if alagoas_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Alagoas" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Alagoas" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Alagoas" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Alagoas")
@@ -14937,15 +14081,10 @@ def check_PLACE_5():
 
                 if bahia_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Bahia" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Bahia" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Bahia" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Bahia")
                 else:
@@ -14953,15 +14092,10 @@ def check_PLACE_5():
 
                 if ceara_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Ceará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Ceará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Ceará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Ceará")
                 else:
@@ -14969,15 +14103,10 @@ def check_PLACE_5():
 
                 if maranhao_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Maranhão" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Maranhão" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Maranhão" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Maranhão")
@@ -14986,15 +14115,10 @@ def check_PLACE_5():
 
                 if paraiba_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraíba" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraíba" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraíba" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Paraíba")
@@ -15003,15 +14127,10 @@ def check_PLACE_5():
 
                 if pernambuco_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pernambuco" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pernambuco" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pernambuco" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Pernambuco")
@@ -15020,15 +14139,10 @@ def check_PLACE_5():
 
                 if piaui_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Piauí" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Piauí" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Piauí" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Piauí")
                 else:
@@ -15036,15 +14150,10 @@ def check_PLACE_5():
 
                 if rio_g_norte_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Rio Grande do Norte")
@@ -15054,15 +14163,10 @@ def check_PLACE_5():
 
                 if sergipe_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Sergipe" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Sergipe" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Sergipe" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Sergipe")
@@ -15073,30 +14177,20 @@ def check_PLACE_5():
 
             if norte_polygon.contains(point):
                 # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                query = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
-                graph.run(query)
-=======
                 query1 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
                 query2 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (r)-[contains:REGION_CONTAINS]->(l)'
                 graph.run(query1)
                 graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                 print(f"Relationship created for {row['name']} with Norte")
 
                 # Check if the point is inside the States boundary polygon
                 if acre_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Acre" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Acre" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Acre" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Acre")
                 else:
@@ -15104,15 +14198,10 @@ def check_PLACE_5():
 
                 if amazonas_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amazonas" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amazonas" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amazonas" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Amazonas")
@@ -15121,15 +14210,10 @@ def check_PLACE_5():
 
                 if amapa_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amapá" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amapá" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amapá" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Amapá")
                 else:
@@ -15137,15 +14221,10 @@ def check_PLACE_5():
 
                 if rondonia_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rondônia" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rondônia" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rondônia" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Rondônia")
@@ -15154,15 +14233,10 @@ def check_PLACE_5():
 
                 if roraima_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Roraima" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Roraima" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Roraima" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Roraima")
@@ -15171,15 +14245,10 @@ def check_PLACE_5():
 
                 if tocantins_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Tocantins" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Tocantins" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Tocantins" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Tocantins")
@@ -15188,15 +14257,10 @@ def check_PLACE_5():
 
                 if para_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Pará")
                 else:
@@ -15206,29 +14270,19 @@ def check_PLACE_5():
 
             if sudeste_polygon.contains(point):
                 # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                query = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sudeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
-                graph.run(query)
-=======
                 query1 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sudeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
                 query2 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sudeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (r)-[contains:REGION_CONTAINS]->(l)'
                 graph.run(query1)
                 graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                 print(f"Relationship created for {row['name']} with Sudeste")
 
                 if espirito_santo_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Espírito Santo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Espírito Santo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Espírito Santo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Espírito Santo")
@@ -15238,15 +14292,10 @@ def check_PLACE_5():
 
                 if minas_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Minas Gerais" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Minas Gerais" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Minas Gerais" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Minas Gerais")
@@ -15256,15 +14305,10 @@ def check_PLACE_5():
 
                 if sao_paulo_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "São Paulo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "São Paulo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "São Paulo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with São Paulo")
@@ -15273,15 +14317,10 @@ def check_PLACE_5():
 
                 if rio_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio de Janeiro" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio de Janeiro" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio de Janeiro" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Rio de Janeiro")
@@ -15294,29 +14333,19 @@ def check_PLACE_5():
 
             if sul_polygon.contains(point):
                 # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                query = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
-                graph.run(query)
-=======
                 query1 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
                 query2 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (r)-[contains:REGION_CONTAINS]->(l)'
                 graph.run(query1)
                 graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                 print(f"Relationship created for {row['name']} with Sul")
 
                 if rio_g_sul_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Rio Grande do Sul")
@@ -15326,15 +14355,10 @@ def check_PLACE_5():
 
                 if parana_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraná" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraná" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraná" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Paraná")
@@ -15343,15 +14367,10 @@ def check_PLACE_5():
 
                 if santa_catarina_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Santa Catarina" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Santa Catarina" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Santa Catarina" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Santa Catarina")
@@ -15364,30 +14383,20 @@ def check_PLACE_5():
 
             if centro_oeste_polygon.contains(point):
                 # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                query = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Centro-Oeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
-                graph.run(query)
-=======
                 query1 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Centro-Oeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
                 query2 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Centro-Oeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (r)-[contains:REGION_CONTAINS]->(l)'
                 graph.run(query1)
                 graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                 print(
                     f"Relationship created for {row['name']} with Centro-Oeste")
 
                 if goias_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Goiás" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Goiás" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Goiás" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Goiás")
                 else:
@@ -15395,15 +14404,10 @@ def check_PLACE_5():
 
                 if mato_sul_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Mato Grosso do Sul")
@@ -15413,15 +14417,10 @@ def check_PLACE_5():
 
                 if mato_grosso_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Mato Grosso")
@@ -15431,15 +14430,10 @@ def check_PLACE_5():
 
                 if distrito_federal_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Distrito Federal" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Distrito Federal" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Distrito Federal" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Distrito Federal")
@@ -15451,11 +14445,7 @@ def check_PLACE_5():
                 print(f"{row['name']} don't match with Centro-Oeste:", point)
         else:
             print(f"{row['name']} don't match with Brazil:", point)
-<<<<<<< HEAD
-# check_PLACE_5()
-=======
 #check_PLACE_5()
->>>>>>> 29e17f6 (Relationship 'contains')
 
 def check_PLACE_6():
     # Load the CSV file with location data
@@ -15595,11 +14585,7 @@ def check_PLACE_6():
         tocantins_polygon = loads(wkt_data)
 
     # Loop through each row in the CSV file
-<<<<<<< HEAD
-    for index, row in df.iterrows():
-=======
     for row in df.iterrows():
->>>>>>> 29e17f6 (Relationship 'contains')
         # Extract latitude and longitude values from the CSV data
         latitude = row["latitude"]
         longitude = row["longitude"]
@@ -15610,44 +14596,29 @@ def check_PLACE_6():
         # Check if the point is inside the Brazil boundary polygon
         if brazil_polygon.contains(point):
             # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-            query = f'MATCH(b:BRAZIL), (l:PLACE) WHERE b.name = "Brasil" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_COUNTRY]->(b)'
-            graph.run(query)
-=======
             query1 = f'MATCH(b:BRAZIL), (l:PLACE) WHERE b.name = "Brasil" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_COUNTRY]->(b)'
             query2 = f'MATCH(b:BRAZIL), (l:PLACE) WHERE b.name = "Brasil" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (b)-[isin:COUNTRY_CONTAINS]->(l)'
             graph.run(query1)
             graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
             print(f"Relationship created for {row['name']} with Brazil")
 
             # Check if the point is inside the Regions and States boundary polygon
             if nordeste_polygon.contains(point):
                 # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                query = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Nordeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
-                graph.run(query)
-=======
                 query1 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Nordeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
                 query2 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Nordeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (r)-[isin:REGION_CONTAINS]->(l)'
                 graph.run(query1)
                 graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                 print(f"Relationship created for {row['name']} with Nordeste")
 
                 if alagoas_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Alagoas" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Alagoas" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Alagoas" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Alagoas")
@@ -15656,15 +14627,10 @@ def check_PLACE_6():
 
                 if bahia_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Bahia" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Bahia" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Bahia" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Bahia")
                 else:
@@ -15672,15 +14638,10 @@ def check_PLACE_6():
 
                 if ceara_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Ceará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Ceará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Ceará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Ceará")
                 else:
@@ -15688,15 +14649,10 @@ def check_PLACE_6():
 
                 if maranhao_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Maranhão" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Maranhão" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Maranhão" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Maranhão")
@@ -15705,15 +14661,10 @@ def check_PLACE_6():
 
                 if paraiba_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraíba" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraíba" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraíba" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Paraíba")
@@ -15722,15 +14673,10 @@ def check_PLACE_6():
 
                 if pernambuco_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pernambuco" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pernambuco" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pernambuco" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Pernambuco")
@@ -15739,15 +14685,10 @@ def check_PLACE_6():
 
                 if piaui_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Piauí" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Piauí" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Piauí" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Piauí")
                 else:
@@ -15755,15 +14696,10 @@ def check_PLACE_6():
 
                 if rio_g_norte_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Rio Grande do Norte")
@@ -15773,15 +14709,10 @@ def check_PLACE_6():
 
                 if sergipe_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Sergipe" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Sergipe" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Sergipe" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Sergipe")
@@ -15792,30 +14723,20 @@ def check_PLACE_6():
 
             if norte_polygon.contains(point):
                 # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                query = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
-                graph.run(query)
-=======
                 query1 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
                 query2 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (r)-[contains:REGION_CONTAINS]->(l)'
                 graph.run(query1)
                 graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                 print(f"Relationship created for {row['name']} with Norte")
 
                 # Check if the point is inside the States boundary polygon
                 if acre_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Acre" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Acre" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Acre" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Acre")
                 else:
@@ -15823,15 +14744,10 @@ def check_PLACE_6():
 
                 if amazonas_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amazonas" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amazonas" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amazonas" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Amazonas")
@@ -15840,15 +14756,10 @@ def check_PLACE_6():
 
                 if amapa_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amapá" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amapá" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amapá" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Amapá")
                 else:
@@ -15856,15 +14767,10 @@ def check_PLACE_6():
 
                 if rondonia_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rondônia" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rondônia" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rondônia" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Rondônia")
@@ -15873,15 +14779,10 @@ def check_PLACE_6():
 
                 if roraima_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Roraima" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Roraima" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Roraima" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Roraima")
@@ -15890,15 +14791,10 @@ def check_PLACE_6():
 
                 if tocantins_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Tocantins" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Tocantins" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Tocantins" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Tocantins")
@@ -15907,15 +14803,10 @@ def check_PLACE_6():
 
                 if para_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Pará")
                 else:
@@ -15925,29 +14816,19 @@ def check_PLACE_6():
 
             if sudeste_polygon.contains(point):
                 # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                query = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sudeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
-                graph.run(query)
-=======
                 query1 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sudeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
                 query2 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sudeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (r)-[contains:REGION_CONTAINS]->(l)'
                 graph.run(query1)
                 graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                 print(f"Relationship created for {row['name']} with Sudeste")
 
                 if espirito_santo_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Espírito Santo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Espírito Santo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Espírito Santo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Espírito Santo")
@@ -15957,15 +14838,10 @@ def check_PLACE_6():
 
                 if minas_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Minas Gerais" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Minas Gerais" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Minas Gerais" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Minas Gerais")
@@ -15975,15 +14851,10 @@ def check_PLACE_6():
 
                 if sao_paulo_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "São Paulo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "São Paulo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "São Paulo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with São Paulo")
@@ -15992,15 +14863,10 @@ def check_PLACE_6():
 
                 if rio_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio de Janeiro" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio de Janeiro" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio de Janeiro" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Rio de Janeiro")
@@ -16013,29 +14879,19 @@ def check_PLACE_6():
 
             if sul_polygon.contains(point):
                 # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                query = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
-                graph.run(query)
-=======
                 query1 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
                 query2 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (r)-[contains:REGION_CONTAINS]->(l)'
                 graph.run(query1)
                 graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                 print(f"Relationship created for {row['name']} with Sul")
 
                 if rio_g_sul_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Rio Grande do Sul")
@@ -16045,15 +14901,10 @@ def check_PLACE_6():
 
                 if parana_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraná" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraná" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraná" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Paraná")
@@ -16062,15 +14913,10 @@ def check_PLACE_6():
 
                 if santa_catarina_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Santa Catarina" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Santa Catarina" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Santa Catarina" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Santa Catarina")
@@ -16083,30 +14929,20 @@ def check_PLACE_6():
 
             if centro_oeste_polygon.contains(point):
                 # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                query = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Centro-Oeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
-                graph.run(query)
-=======
                 query1 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Centro-Oeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
                 query2 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Centro-Oeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (r)-[contains:REGION_CONTAINS]->(l)'
                 graph.run(query1)
                 graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                 print(
                     f"Relationship created for {row['name']} with Centro-Oeste")
 
                 if goias_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Goiás" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Goiás" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Goiás" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Goiás")
                 else:
@@ -16114,15 +14950,10 @@ def check_PLACE_6():
 
                 if mato_sul_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Mato Grosso do Sul")
@@ -16132,15 +14963,10 @@ def check_PLACE_6():
 
                 if mato_grosso_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Mato Grosso")
@@ -16150,15 +14976,10 @@ def check_PLACE_6():
 
                 if distrito_federal_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Distrito Federal" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Distrito Federal" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Distrito Federal" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Distrito Federal")
@@ -16170,11 +14991,7 @@ def check_PLACE_6():
                 print(f"{row['name']} don't match with Centro-Oeste:", point)
         else:
             print(f"{row['name']} don't match with Brazil:", point)
-<<<<<<< HEAD
-# check_PLACE_6()
-=======
 #check_PLACE_6()
->>>>>>> 29e17f6 (Relationship 'contains')
 
 def check_PLACE_7():
     # Load the CSV file with location data
@@ -16314,11 +15131,7 @@ def check_PLACE_7():
         tocantins_polygon = loads(wkt_data)
 
     # Loop through each row in the CSV file
-<<<<<<< HEAD
-    for index, row in df.iterrows():
-=======
     for row in df.iterrows():
->>>>>>> 29e17f6 (Relationship 'contains')
         # Extract latitude and longitude values from the CSV data
         latitude = row["latitude"]
         longitude = row["longitude"]
@@ -16330,11 +15143,7 @@ def check_PLACE_7():
         if brazil_polygon.contains(point):
             # If the point is inside the polygon, create a relationship in Neo4j
             query1 = f'MATCH(b:BRAZIL), (l:PLACE) WHERE b.name = "Brasil" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_COUNTRY]->(b)'
-<<<<<<< HEAD
-            query2 = f'MATCH(b:BRAZIL), (l:PLACE) WHERE b.name = "Brasil" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (b)-[contains:COUNTRY_CONTAINS]->(l)'
-=======
             query2 = f'MATCH(b:BRAZIL), (l:PLACE) WHERE b.name = "Brasil" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (b)-[isin:COUNTRY_CONTAINS]->(l)'
->>>>>>> 29e17f6 (Relationship 'contains')
             graph.run(query1)
             graph.run(query2)
 
@@ -16344,11 +15153,7 @@ def check_PLACE_7():
             if nordeste_polygon.contains(point):
                 # If the point is inside the polygon, create a relationship in Neo4j
                 query1 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Nordeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
-<<<<<<< HEAD
-                query2 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Nordeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (r)-[contains:REGION_CONTAINS]->(l)'
-=======
                 query2 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Nordeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (r)-[isin:REGION_CONTAINS]->(l)'
->>>>>>> 29e17f6 (Relationship 'contains')
                 graph.run(query1)
                 graph.run(query2)
 
@@ -16368,15 +15173,10 @@ def check_PLACE_7():
 
                 if bahia_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Bahia" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Bahia" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Bahia" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Bahia")
                 else:
@@ -16384,15 +15184,10 @@ def check_PLACE_7():
 
                 if ceara_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Ceará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Ceará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Ceará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Ceará")
                 else:
@@ -16400,15 +15195,10 @@ def check_PLACE_7():
 
                 if maranhao_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Maranhão" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Maranhão" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Maranhão" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Maranhão")
@@ -16417,15 +15207,10 @@ def check_PLACE_7():
 
                 if paraiba_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraíba" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraíba" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraíba" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Paraíba")
@@ -16435,11 +15220,7 @@ def check_PLACE_7():
                 if pernambuco_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pernambuco" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-<<<<<<< HEAD
-                    query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pernambuco" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pernambuco" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
->>>>>>> 29e17f6 (Relationship 'contains')
                     graph.run(query1)
                     graph.run(query2)
 
@@ -16450,15 +15231,10 @@ def check_PLACE_7():
 
                 if piaui_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Piauí" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Piauí" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Piauí" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Piauí")
                 else:
@@ -16466,15 +15242,10 @@ def check_PLACE_7():
 
                 if rio_g_norte_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Rio Grande do Norte")
@@ -16484,15 +15255,10 @@ def check_PLACE_7():
 
                 if sergipe_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Sergipe" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Sergipe" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Sergipe" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Sergipe")
@@ -16503,30 +15269,20 @@ def check_PLACE_7():
 
             if norte_polygon.contains(point):
                 # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                query = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
-                graph.run(query)
-=======
                 query1 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
                 query2 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (r)-[contains:REGION_CONTAINS]->(l)'
                 graph.run(query1)
                 graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                 print(f"Relationship created for {row['name']} with Norte")
 
                 # Check if the point is inside the States boundary polygon
                 if acre_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Acre" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Acre" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Acre" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Acre")
                 else:
@@ -16534,15 +15290,10 @@ def check_PLACE_7():
 
                 if amazonas_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amazonas" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amazonas" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amazonas" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Amazonas")
@@ -16551,15 +15302,10 @@ def check_PLACE_7():
 
                 if amapa_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amapá" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amapá" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amapá" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Amapá")
                 else:
@@ -16567,15 +15313,10 @@ def check_PLACE_7():
 
                 if rondonia_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rondônia" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rondônia" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rondônia" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Rondônia")
@@ -16584,15 +15325,10 @@ def check_PLACE_7():
 
                 if roraima_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Roraima" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Roraima" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Roraima" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Roraima")
@@ -16601,15 +15337,10 @@ def check_PLACE_7():
 
                 if tocantins_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Tocantins" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Tocantins" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Tocantins" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Tocantins")
@@ -16618,15 +15349,10 @@ def check_PLACE_7():
 
                 if para_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Pará")
                 else:
@@ -16636,29 +15362,19 @@ def check_PLACE_7():
 
             if sudeste_polygon.contains(point):
                 # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                query = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sudeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
-                graph.run(query)
-=======
                 query1 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sudeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
                 query2 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sudeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (r)-[contains:REGION_CONTAINS]->(l)'
                 graph.run(query1)
                 graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                 print(f"Relationship created for {row['name']} with Sudeste")
 
                 if espirito_santo_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Espírito Santo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Espírito Santo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Espírito Santo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Espírito Santo")
@@ -16668,15 +15384,10 @@ def check_PLACE_7():
 
                 if minas_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Minas Gerais" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Minas Gerais" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Minas Gerais" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Minas Gerais")
@@ -16686,15 +15397,10 @@ def check_PLACE_7():
 
                 if sao_paulo_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "São Paulo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "São Paulo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "São Paulo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with São Paulo")
@@ -16703,15 +15409,10 @@ def check_PLACE_7():
 
                 if rio_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio de Janeiro" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio de Janeiro" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio de Janeiro" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Rio de Janeiro")
@@ -16724,29 +15425,19 @@ def check_PLACE_7():
 
             if sul_polygon.contains(point):
                 # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                query = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
-                graph.run(query)
-=======
                 query1 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
                 query2 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (r)-[contains:REGION_CONTAINS]->(l)'
                 graph.run(query1)
                 graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                 print(f"Relationship created for {row['name']} with Sul")
 
                 if rio_g_sul_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Rio Grande do Sul")
@@ -16756,15 +15447,10 @@ def check_PLACE_7():
 
                 if parana_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraná" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraná" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraná" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Paraná")
@@ -16773,15 +15459,10 @@ def check_PLACE_7():
 
                 if santa_catarina_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Santa Catarina" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Santa Catarina" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Santa Catarina" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Santa Catarina")
@@ -16794,30 +15475,20 @@ def check_PLACE_7():
 
             if centro_oeste_polygon.contains(point):
                 # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                query = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Centro-Oeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
-                graph.run(query)
-=======
                 query1 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Centro-Oeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
                 query2 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Centro-Oeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (r)-[contains:REGION_CONTAINS]->(l)'
                 graph.run(query1)
                 graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                 print(
                     f"Relationship created for {row['name']} with Centro-Oeste")
 
                 if goias_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Goiás" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Goiás" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Goiás" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Goiás")
                 else:
@@ -16825,15 +15496,10 @@ def check_PLACE_7():
 
                 if mato_sul_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Mato Grosso do Sul")
@@ -16843,15 +15509,10 @@ def check_PLACE_7():
 
                 if mato_grosso_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Mato Grosso")
@@ -16861,15 +15522,10 @@ def check_PLACE_7():
 
                 if distrito_federal_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Distrito Federal" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Distrito Federal" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Distrito Federal" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Distrito Federal")
@@ -17021,11 +15677,7 @@ def check_PLACE_8():
         tocantins_polygon = loads(wkt_data)
 
     # Loop through each row in the CSV file
-<<<<<<< HEAD
-    for index, row in df.iterrows():
-=======
     for row in df.iterrows():
->>>>>>> 29e17f6 (Relationship 'contains')
         # Extract latitude and longitude values from the CSV data
         latitude = row["latitude"]
         longitude = row["longitude"]
@@ -17036,44 +15688,29 @@ def check_PLACE_8():
         # Check if the point is inside the Brazil boundary polygon
         if brazil_polygon.contains(point):
             # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-            query = f'MATCH(b:BRAZIL), (l:PLACE) WHERE b.name = "Brasil" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_COUNTRY]->(b)'
-            graph.run(query)
-=======
             query1 = f'MATCH(b:BRAZIL), (l:PLACE) WHERE b.name = "Brasil" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_COUNTRY]->(b)'
             query2 = f'MATCH(b:BRAZIL), (l:PLACE) WHERE b.name = "Brasil" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (b)-[isin:COUNTRY_CONTAINS]->(l)'
             graph.run(query1)
             graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
             print(f"Relationship created for {row['name']} with Brazil")
 
             # Check if the point is inside the Regions and States boundary polygon
             if nordeste_polygon.contains(point):
                 # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                query = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Nordeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
-                graph.run(query)
-=======
                 query1 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Nordeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
                 query2 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Nordeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (r)-[isin:REGION_CONTAINS]->(l)'
                 graph.run(query1)
                 graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                 print(f"Relationship created for {row['name']} with Nordeste")
 
                 if alagoas_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Alagoas" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Alagoas" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Alagoas" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Alagoas")
@@ -17082,15 +15719,10 @@ def check_PLACE_8():
 
                 if bahia_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Bahia" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Bahia" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Bahia" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Bahia")
                 else:
@@ -17098,15 +15730,10 @@ def check_PLACE_8():
 
                 if ceara_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Ceará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Ceará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Ceará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Ceará")
                 else:
@@ -17114,15 +15741,10 @@ def check_PLACE_8():
 
                 if maranhao_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Maranhão" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Maranhão" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Maranhão" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Maranhão")
@@ -17131,15 +15753,10 @@ def check_PLACE_8():
 
                 if paraiba_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraíba" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraíba" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraíba" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Paraíba")
@@ -17148,15 +15765,10 @@ def check_PLACE_8():
 
                 if pernambuco_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pernambuco" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pernambuco" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pernambuco" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Pernambuco")
@@ -17165,15 +15777,10 @@ def check_PLACE_8():
 
                 if piaui_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Piauí" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Piauí" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Piauí" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Piauí")
                 else:
@@ -17181,15 +15788,10 @@ def check_PLACE_8():
 
                 if rio_g_norte_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Rio Grande do Norte")
@@ -17199,15 +15801,10 @@ def check_PLACE_8():
 
                 if sergipe_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Sergipe" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Sergipe" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Sergipe" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Sergipe")
@@ -17218,30 +15815,20 @@ def check_PLACE_8():
 
             if norte_polygon.contains(point):
                 # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                query = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
-                graph.run(query)
-=======
                 query1 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
                 query2 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (r)-[contains:REGION_CONTAINS]->(l)'
                 graph.run(query1)
                 graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                 print(f"Relationship created for {row['name']} with Norte")
 
                 # Check if the point is inside the States boundary polygon
                 if acre_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Acre" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Acre" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Acre" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Acre")
                 else:
@@ -17249,15 +15836,10 @@ def check_PLACE_8():
 
                 if amazonas_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amazonas" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amazonas" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amazonas" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Amazonas")
@@ -17266,15 +15848,10 @@ def check_PLACE_8():
 
                 if amapa_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amapá" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amapá" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amapá" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Amapá")
                 else:
@@ -17282,15 +15859,10 @@ def check_PLACE_8():
 
                 if rondonia_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rondônia" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rondônia" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rondônia" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Rondônia")
@@ -17299,15 +15871,10 @@ def check_PLACE_8():
 
                 if roraima_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Roraima" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Roraima" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Roraima" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Roraima")
@@ -17316,15 +15883,10 @@ def check_PLACE_8():
 
                 if tocantins_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Tocantins" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Tocantins" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Tocantins" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Tocantins")
@@ -17333,15 +15895,10 @@ def check_PLACE_8():
 
                 if para_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Pará")
                 else:
@@ -17351,29 +15908,19 @@ def check_PLACE_8():
 
             if sudeste_polygon.contains(point):
                 # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                query = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sudeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
-                graph.run(query)
-=======
                 query1 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sudeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
                 query2 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sudeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (r)-[contains:REGION_CONTAINS]->(l)'
                 graph.run(query1)
                 graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                 print(f"Relationship created for {row['name']} with Sudeste")
 
                 if espirito_santo_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Espírito Santo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Espírito Santo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Espírito Santo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Espírito Santo")
@@ -17383,15 +15930,10 @@ def check_PLACE_8():
 
                 if minas_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Minas Gerais" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Minas Gerais" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Minas Gerais" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Minas Gerais")
@@ -17401,15 +15943,10 @@ def check_PLACE_8():
 
                 if sao_paulo_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "São Paulo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "São Paulo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "São Paulo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with São Paulo")
@@ -17418,15 +15955,10 @@ def check_PLACE_8():
 
                 if rio_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio de Janeiro" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio de Janeiro" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio de Janeiro" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Rio de Janeiro")
@@ -17439,29 +15971,19 @@ def check_PLACE_8():
 
             if sul_polygon.contains(point):
                 # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                query = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
-                graph.run(query)
-=======
                 query1 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
                 query2 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (r)-[contains:REGION_CONTAINS]->(l)'
                 graph.run(query1)
                 graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                 print(f"Relationship created for {row['name']} with Sul")
 
                 if rio_g_sul_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Rio Grande do Sul")
@@ -17471,15 +15993,10 @@ def check_PLACE_8():
 
                 if parana_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraná" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraná" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraná" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Paraná")
@@ -17488,15 +16005,10 @@ def check_PLACE_8():
 
                 if santa_catarina_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Santa Catarina" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Santa Catarina" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Santa Catarina" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Santa Catarina")
@@ -17509,30 +16021,20 @@ def check_PLACE_8():
 
             if centro_oeste_polygon.contains(point):
                 # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                query = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Centro-Oeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
-                graph.run(query)
-=======
                 query1 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Centro-Oeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
                 query2 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Centro-Oeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (r)-[contains:REGION_CONTAINS]->(l)'
                 graph.run(query1)
                 graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                 print(
                     f"Relationship created for {row['name']} with Centro-Oeste")
 
                 if goias_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Goiás" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Goiás" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Goiás" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Goiás")
                 else:
@@ -17540,15 +16042,10 @@ def check_PLACE_8():
 
                 if mato_sul_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Mato Grosso do Sul")
@@ -17558,15 +16055,10 @@ def check_PLACE_8():
 
                 if mato_grosso_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Mato Grosso")
@@ -17576,15 +16068,10 @@ def check_PLACE_8():
 
                 if distrito_federal_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Distrito Federal" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Distrito Federal" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Distrito Federal" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Distrito Federal")
@@ -17596,11 +16083,7 @@ def check_PLACE_8():
                 print(f"{row['name']} don't match with Centro-Oeste:", point)
         else:
             print(f"{row['name']} don't match with Brazil:", point)
-<<<<<<< HEAD
-# check_PLACE_8()
-=======
 #check_PLACE_8()
->>>>>>> 29e17f6 (Relationship 'contains')
 
 def check_PLACE_9():
     # Load the CSV file with location data
@@ -17740,11 +16223,7 @@ def check_PLACE_9():
         tocantins_polygon = loads(wkt_data)
 
     # Loop through each row in the CSV file
-<<<<<<< HEAD
-    for index, row in df.iterrows():
-=======
     for row in df.iterrows():
->>>>>>> 29e17f6 (Relationship 'contains')
         # Extract latitude and longitude values from the CSV data
         latitude = row["latitude"]
         longitude = row["longitude"]
@@ -17755,44 +16234,29 @@ def check_PLACE_9():
         # Check if the point is inside the Brazil boundary polygon
         if brazil_polygon.contains(point):
             # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-            query = f'MATCH(b:BRAZIL), (l:PLACE) WHERE b.name = "Brasil" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_COUNTRY]->(b)'
-            graph.run(query)
-=======
             query1 = f'MATCH(b:BRAZIL), (l:PLACE) WHERE b.name = "Brasil" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_COUNTRY]->(b)'
             query2 = f'MATCH(b:BRAZIL), (l:PLACE) WHERE b.name = "Brasil" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (b)-[isin:COUNTRY_CONTAINS]->(l)'
             graph.run(query1)
             graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
             print(f"Relationship created for {row['name']} with Brazil")
 
             # Check if the point is inside the Regions and States boundary polygon
             if nordeste_polygon.contains(point):
                 # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                query = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Nordeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
-                graph.run(query)
-=======
                 query1 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Nordeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
                 query2 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Nordeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (r)-[isin:REGION_CONTAINS]->(l)'
                 graph.run(query1)
                 graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                 print(f"Relationship created for {row['name']} with Nordeste")
 
                 if alagoas_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Alagoas" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Alagoas" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Alagoas" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Alagoas")
@@ -17801,15 +16265,10 @@ def check_PLACE_9():
 
                 if bahia_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Bahia" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Bahia" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Bahia" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Bahia")
                 else:
@@ -17817,15 +16276,10 @@ def check_PLACE_9():
 
                 if ceara_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Ceará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Ceará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Ceará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Ceará")
                 else:
@@ -17833,15 +16287,10 @@ def check_PLACE_9():
 
                 if maranhao_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Maranhão" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Maranhão" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Maranhão" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Maranhão")
@@ -17850,15 +16299,10 @@ def check_PLACE_9():
 
                 if paraiba_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraíba" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraíba" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraíba" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Paraíba")
@@ -17867,15 +16311,10 @@ def check_PLACE_9():
 
                 if pernambuco_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pernambuco" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pernambuco" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pernambuco" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Pernambuco")
@@ -17884,15 +16323,10 @@ def check_PLACE_9():
 
                 if piaui_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Piauí" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Piauí" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Piauí" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Piauí")
                 else:
@@ -17900,15 +16334,10 @@ def check_PLACE_9():
 
                 if rio_g_norte_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Rio Grande do Norte")
@@ -17918,15 +16347,10 @@ def check_PLACE_9():
 
                 if sergipe_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Sergipe" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Sergipe" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Sergipe" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Sergipe")
@@ -17937,30 +16361,20 @@ def check_PLACE_9():
 
             if norte_polygon.contains(point):
                 # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                query = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
-                graph.run(query)
-=======
                 query1 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
                 query2 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (r)-[contains:REGION_CONTAINS]->(l)'
                 graph.run(query1)
                 graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                 print(f"Relationship created for {row['name']} with Norte")
 
                 # Check if the point is inside the States boundary polygon
                 if acre_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Acre" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Acre" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Acre" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Acre")
                 else:
@@ -17968,15 +16382,10 @@ def check_PLACE_9():
 
                 if amazonas_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amazonas" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amazonas" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amazonas" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Amazonas")
@@ -17985,15 +16394,10 @@ def check_PLACE_9():
 
                 if amapa_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amapá" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amapá" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amapá" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Amapá")
                 else:
@@ -18001,15 +16405,10 @@ def check_PLACE_9():
 
                 if rondonia_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rondônia" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rondônia" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rondônia" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Rondônia")
@@ -18018,15 +16417,10 @@ def check_PLACE_9():
 
                 if roraima_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Roraima" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Roraima" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Roraima" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Roraima")
@@ -18035,15 +16429,10 @@ def check_PLACE_9():
 
                 if tocantins_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Tocantins" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Tocantins" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Tocantins" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Tocantins")
@@ -18052,15 +16441,10 @@ def check_PLACE_9():
 
                 if para_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Pará")
                 else:
@@ -18070,29 +16454,19 @@ def check_PLACE_9():
 
             if sudeste_polygon.contains(point):
                 # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                query = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sudeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
-                graph.run(query)
-=======
                 query1 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sudeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
                 query2 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sudeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (r)-[contains:REGION_CONTAINS]->(l)'
                 graph.run(query1)
                 graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                 print(f"Relationship created for {row['name']} with Sudeste")
 
                 if espirito_santo_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Espírito Santo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Espírito Santo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Espírito Santo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Espírito Santo")
@@ -18102,15 +16476,10 @@ def check_PLACE_9():
 
                 if minas_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Minas Gerais" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Minas Gerais" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Minas Gerais" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Minas Gerais")
@@ -18120,15 +16489,10 @@ def check_PLACE_9():
 
                 if sao_paulo_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "São Paulo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "São Paulo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "São Paulo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with São Paulo")
@@ -18137,15 +16501,10 @@ def check_PLACE_9():
 
                 if rio_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio de Janeiro" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio de Janeiro" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio de Janeiro" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Rio de Janeiro")
@@ -18158,29 +16517,19 @@ def check_PLACE_9():
 
             if sul_polygon.contains(point):
                 # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                query = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
-                graph.run(query)
-=======
                 query1 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
                 query2 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (r)-[contains:REGION_CONTAINS]->(l)'
                 graph.run(query1)
                 graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                 print(f"Relationship created for {row['name']} with Sul")
 
                 if rio_g_sul_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Rio Grande do Sul")
@@ -18190,15 +16539,10 @@ def check_PLACE_9():
 
                 if parana_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraná" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraná" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraná" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Paraná")
@@ -18207,15 +16551,10 @@ def check_PLACE_9():
 
                 if santa_catarina_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Santa Catarina" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Santa Catarina" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Santa Catarina" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Santa Catarina")
@@ -18228,30 +16567,20 @@ def check_PLACE_9():
 
             if centro_oeste_polygon.contains(point):
                 # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                query = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Centro-Oeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
-                graph.run(query)
-=======
                 query1 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Centro-Oeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
                 query2 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Centro-Oeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (r)-[contains:REGION_CONTAINS]->(l)'
                 graph.run(query1)
                 graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                 print(
                     f"Relationship created for {row['name']} with Centro-Oeste")
 
                 if goias_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Goiás" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Goiás" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Goiás" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Goiás")
                 else:
@@ -18259,15 +16588,10 @@ def check_PLACE_9():
 
                 if mato_sul_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Mato Grosso do Sul")
@@ -18277,15 +16601,10 @@ def check_PLACE_9():
 
                 if mato_grosso_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Mato Grosso")
@@ -18295,15 +16614,10 @@ def check_PLACE_9():
 
                 if distrito_federal_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Distrito Federal" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Distrito Federal" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Distrito Federal" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Distrito Federal")
@@ -18315,11 +16629,7 @@ def check_PLACE_9():
                 print(f"{row['name']} don't match with Centro-Oeste:", point)
         else:
             print(f"{row['name']} don't match with Brazil:", point)
-<<<<<<< HEAD
-# check_PLACE_9()
-=======
 #check_PLACE_9()
->>>>>>> 29e17f6 (Relationship 'contains')
 
 def check_PLACE_10():
     # Load the CSV file with location data
@@ -18459,11 +16769,7 @@ def check_PLACE_10():
         tocantins_polygon = loads(wkt_data)
 
     # Loop through each row in the CSV file
-<<<<<<< HEAD
-    for index, row in df.iterrows():
-=======
     for row in df.iterrows():
->>>>>>> 29e17f6 (Relationship 'contains')
         # Extract latitude and longitude values from the CSV data
         latitude = row["latitude"]
         longitude = row["longitude"]
@@ -18474,44 +16780,29 @@ def check_PLACE_10():
         # Check if the point is inside the Brazil boundary polygon
         if brazil_polygon.contains(point):
             # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-            query = f'MATCH(b:BRAZIL), (l:PLACE) WHERE b.name = "Brasil" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_COUNTRY]->(b)'
-            graph.run(query)
-=======
             query1 = f'MATCH(b:BRAZIL), (l:PLACE) WHERE b.name = "Brasil" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_COUNTRY]->(b)'
             query2 = f'MATCH(b:BRAZIL), (l:PLACE) WHERE b.name = "Brasil" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (b)-[isin:COUNTRY_CONTAINS]->(l)'
             graph.run(query1)
             graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
             print(f"Relationship created for {row['name']} with Brazil")
 
             # Check if the point is inside the Regions and States boundary polygon
             if nordeste_polygon.contains(point):
                 # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                query = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Nordeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
-                graph.run(query)
-=======
                 query1 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Nordeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
                 query2 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Nordeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (r)-[isin:REGION_CONTAINS]->(l)'
                 graph.run(query1)
                 graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                 print(f"Relationship created for {row['name']} with Nordeste")
 
                 if alagoas_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Alagoas" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Alagoas" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Alagoas" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Alagoas")
@@ -18520,15 +16811,10 @@ def check_PLACE_10():
 
                 if bahia_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Bahia" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Bahia" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Bahia" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Bahia")
                 else:
@@ -18536,15 +16822,10 @@ def check_PLACE_10():
 
                 if ceara_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Ceará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Ceará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Ceará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Ceará")
                 else:
@@ -18552,15 +16833,10 @@ def check_PLACE_10():
 
                 if maranhao_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Maranhão" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Maranhão" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Maranhão" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Maranhão")
@@ -18569,15 +16845,10 @@ def check_PLACE_10():
 
                 if paraiba_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraíba" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraíba" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraíba" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Paraíba")
@@ -18586,15 +16857,10 @@ def check_PLACE_10():
 
                 if pernambuco_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pernambuco" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pernambuco" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pernambuco" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Pernambuco")
@@ -18603,15 +16869,10 @@ def check_PLACE_10():
 
                 if piaui_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Piauí" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Piauí" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Piauí" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Piauí")
                 else:
@@ -18619,15 +16880,10 @@ def check_PLACE_10():
 
                 if rio_g_norte_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Rio Grande do Norte")
@@ -18637,15 +16893,10 @@ def check_PLACE_10():
 
                 if sergipe_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Sergipe" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Sergipe" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Sergipe" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Sergipe")
@@ -18656,30 +16907,20 @@ def check_PLACE_10():
 
             if norte_polygon.contains(point):
                 # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                query = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
-                graph.run(query)
-=======
                 query1 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
                 query2 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (r)-[contains:REGION_CONTAINS]->(l)'
                 graph.run(query1)
                 graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                 print(f"Relationship created for {row['name']} with Norte")
 
                 # Check if the point is inside the States boundary polygon
                 if acre_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Acre" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Acre" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Acre" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Acre")
                 else:
@@ -18687,15 +16928,10 @@ def check_PLACE_10():
 
                 if amazonas_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amazonas" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amazonas" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amazonas" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Amazonas")
@@ -18704,15 +16940,10 @@ def check_PLACE_10():
 
                 if amapa_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amapá" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amapá" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amapá" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Amapá")
                 else:
@@ -18720,15 +16951,10 @@ def check_PLACE_10():
 
                 if rondonia_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rondônia" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rondônia" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rondônia" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Rondônia")
@@ -18737,15 +16963,10 @@ def check_PLACE_10():
 
                 if roraima_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Roraima" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Roraima" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Roraima" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Roraima")
@@ -18754,15 +16975,10 @@ def check_PLACE_10():
 
                 if tocantins_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Tocantins" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Tocantins" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Tocantins" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Tocantins")
@@ -18771,15 +16987,10 @@ def check_PLACE_10():
 
                 if para_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Pará")
                 else:
@@ -18789,29 +17000,19 @@ def check_PLACE_10():
 
             if sudeste_polygon.contains(point):
                 # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                query = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sudeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
-                graph.run(query)
-=======
                 query1 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sudeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
                 query2 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sudeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (r)-[contains:REGION_CONTAINS]->(l)'
                 graph.run(query1)
                 graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                 print(f"Relationship created for {row['name']} with Sudeste")
 
                 if espirito_santo_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Espírito Santo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Espírito Santo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Espírito Santo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Espírito Santo")
@@ -18821,15 +17022,10 @@ def check_PLACE_10():
 
                 if minas_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Minas Gerais" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Minas Gerais" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Minas Gerais" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Minas Gerais")
@@ -18839,15 +17035,10 @@ def check_PLACE_10():
 
                 if sao_paulo_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "São Paulo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "São Paulo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "São Paulo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with São Paulo")
@@ -18856,15 +17047,10 @@ def check_PLACE_10():
 
                 if rio_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio de Janeiro" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio de Janeiro" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio de Janeiro" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Rio de Janeiro")
@@ -18877,29 +17063,19 @@ def check_PLACE_10():
 
             if sul_polygon.contains(point):
                 # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                query = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
-                graph.run(query)
-=======
                 query1 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
                 query2 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (r)-[contains:REGION_CONTAINS]->(l)'
                 graph.run(query1)
                 graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                 print(f"Relationship created for {row['name']} with Sul")
 
                 if rio_g_sul_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Rio Grande do Sul")
@@ -18909,15 +17085,10 @@ def check_PLACE_10():
 
                 if parana_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraná" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraná" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraná" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Paraná")
@@ -18926,15 +17097,10 @@ def check_PLACE_10():
 
                 if santa_catarina_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Santa Catarina" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Santa Catarina" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Santa Catarina" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Santa Catarina")
@@ -18947,30 +17113,20 @@ def check_PLACE_10():
 
             if centro_oeste_polygon.contains(point):
                 # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                query = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Centro-Oeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
-                graph.run(query)
-=======
                 query1 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Centro-Oeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
                 query2 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Centro-Oeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (r)-[contains:REGION_CONTAINS]->(l)'
                 graph.run(query1)
                 graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                 print(
                     f"Relationship created for {row['name']} with Centro-Oeste")
 
                 if goias_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Goiás" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Goiás" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Goiás" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Goiás")
                 else:
@@ -18978,15 +17134,10 @@ def check_PLACE_10():
 
                 if mato_sul_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Mato Grosso do Sul")
@@ -18996,15 +17147,10 @@ def check_PLACE_10():
 
                 if mato_grosso_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Mato Grosso")
@@ -19014,15 +17160,10 @@ def check_PLACE_10():
 
                 if distrito_federal_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Distrito Federal" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Distrito Federal" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Distrito Federal" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Distrito Federal")
@@ -19174,11 +17315,7 @@ def check_PLACE_11():
         tocantins_polygon = loads(wkt_data)
 
     # Loop through each row in the CSV file
-<<<<<<< HEAD
-    for index, row in df.iterrows():
-=======
     for row in df.iterrows():
->>>>>>> 29e17f6 (Relationship 'contains')
         # Extract latitude and longitude values from the CSV data
         latitude = row["latitude"]
         longitude = row["longitude"]
@@ -19189,44 +17326,29 @@ def check_PLACE_11():
         # Check if the point is inside the Brazil boundary polygon
         if brazil_polygon.contains(point):
             # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-            query = f'MATCH(b:BRAZIL), (l:PLACE) WHERE b.name = "Brasil" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_COUNTRY]->(b)'
-            graph.run(query)
-=======
             query1 = f'MATCH(b:BRAZIL), (l:PLACE) WHERE b.name = "Brasil" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_COUNTRY]->(b)'
             query2 = f'MATCH(b:BRAZIL), (l:PLACE) WHERE b.name = "Brasil" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (b)-[isin:COUNTRY_CONTAINS]->(l)'
             graph.run(query1)
             graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
             print(f"Relationship created for {row['name']} with Brazil")
 
             # Check if the point is inside the Regions and States boundary polygon
             if nordeste_polygon.contains(point):
                 # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                query = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Nordeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
-                graph.run(query)
-=======
                 query1 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Nordeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
                 query2 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Nordeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (r)-[isin:REGION_CONTAINS]->(l)'
                 graph.run(query1)
                 graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                 print(f"Relationship created for {row['name']} with Nordeste")
 
                 if alagoas_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Alagoas" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Alagoas" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Alagoas" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Alagoas")
@@ -19235,15 +17357,10 @@ def check_PLACE_11():
 
                 if bahia_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Bahia" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Bahia" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Bahia" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Bahia")
                 else:
@@ -19251,15 +17368,10 @@ def check_PLACE_11():
 
                 if ceara_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Ceará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Ceará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Ceará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Ceará")
                 else:
@@ -19267,15 +17379,10 @@ def check_PLACE_11():
 
                 if maranhao_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Maranhão" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Maranhão" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Maranhão" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Maranhão")
@@ -19284,15 +17391,10 @@ def check_PLACE_11():
 
                 if paraiba_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraíba" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraíba" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraíba" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Paraíba")
@@ -19301,15 +17403,10 @@ def check_PLACE_11():
 
                 if pernambuco_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pernambuco" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pernambuco" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pernambuco" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Pernambuco")
@@ -19318,15 +17415,10 @@ def check_PLACE_11():
 
                 if piaui_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Piauí" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Piauí" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Piauí" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Piauí")
                 else:
@@ -19334,15 +17426,10 @@ def check_PLACE_11():
 
                 if rio_g_norte_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Rio Grande do Norte")
@@ -19352,15 +17439,10 @@ def check_PLACE_11():
 
                 if sergipe_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Sergipe" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Sergipe" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Sergipe" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Sergipe")
@@ -19371,30 +17453,20 @@ def check_PLACE_11():
 
             if norte_polygon.contains(point):
                 # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                query = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
-                graph.run(query)
-=======
                 query1 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
                 query2 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (r)-[contains:REGION_CONTAINS]->(l)'
                 graph.run(query1)
                 graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                 print(f"Relationship created for {row['name']} with Norte")
 
                 # Check if the point is inside the States boundary polygon
                 if acre_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Acre" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Acre" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Acre" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Acre")
                 else:
@@ -19402,15 +17474,10 @@ def check_PLACE_11():
 
                 if amazonas_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amazonas" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amazonas" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amazonas" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Amazonas")
@@ -19419,15 +17486,10 @@ def check_PLACE_11():
 
                 if amapa_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amapá" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amapá" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amapá" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Amapá")
                 else:
@@ -19435,15 +17497,10 @@ def check_PLACE_11():
 
                 if rondonia_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rondônia" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rondônia" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rondônia" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Rondônia")
@@ -19452,15 +17509,10 @@ def check_PLACE_11():
 
                 if roraima_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Roraima" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Roraima" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Roraima" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Roraima")
@@ -19469,15 +17521,10 @@ def check_PLACE_11():
 
                 if tocantins_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Tocantins" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Tocantins" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Tocantins" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Tocantins")
@@ -19486,15 +17533,10 @@ def check_PLACE_11():
 
                 if para_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Pará")
                 else:
@@ -19504,29 +17546,19 @@ def check_PLACE_11():
 
             if sudeste_polygon.contains(point):
                 # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                query = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sudeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
-                graph.run(query)
-=======
                 query1 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sudeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
                 query2 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sudeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (r)-[contains:REGION_CONTAINS]->(l)'
                 graph.run(query1)
                 graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                 print(f"Relationship created for {row['name']} with Sudeste")
 
                 if espirito_santo_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Espírito Santo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Espírito Santo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Espírito Santo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Espírito Santo")
@@ -19536,15 +17568,10 @@ def check_PLACE_11():
 
                 if minas_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Minas Gerais" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Minas Gerais" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Minas Gerais" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Minas Gerais")
@@ -19554,15 +17581,10 @@ def check_PLACE_11():
 
                 if sao_paulo_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "São Paulo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "São Paulo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "São Paulo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with São Paulo")
@@ -19571,15 +17593,10 @@ def check_PLACE_11():
 
                 if rio_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio de Janeiro" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio de Janeiro" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio de Janeiro" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Rio de Janeiro")
@@ -19592,29 +17609,19 @@ def check_PLACE_11():
 
             if sul_polygon.contains(point):
                 # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                query = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
-                graph.run(query)
-=======
                 query1 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
                 query2 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (r)-[contains:REGION_CONTAINS]->(l)'
                 graph.run(query1)
                 graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                 print(f"Relationship created for {row['name']} with Sul")
 
                 if rio_g_sul_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Rio Grande do Sul")
@@ -19624,15 +17631,10 @@ def check_PLACE_11():
 
                 if parana_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraná" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraná" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraná" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Paraná")
@@ -19641,15 +17643,10 @@ def check_PLACE_11():
 
                 if santa_catarina_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Santa Catarina" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Santa Catarina" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Santa Catarina" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Santa Catarina")
@@ -19662,30 +17659,20 @@ def check_PLACE_11():
 
             if centro_oeste_polygon.contains(point):
                 # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                query = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Centro-Oeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
-                graph.run(query)
-=======
                 query1 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Centro-Oeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
                 query2 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Centro-Oeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (r)-[contains:REGION_CONTAINS]->(l)'
                 graph.run(query1)
                 graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                 print(
                     f"Relationship created for {row['name']} with Centro-Oeste")
 
                 if goias_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Goiás" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Goiás" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Goiás" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Goiás")
                 else:
@@ -19693,15 +17680,10 @@ def check_PLACE_11():
 
                 if mato_sul_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Mato Grosso do Sul")
@@ -19711,15 +17693,10 @@ def check_PLACE_11():
 
                 if mato_grosso_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Mato Grosso")
@@ -19729,15 +17706,10 @@ def check_PLACE_11():
 
                 if distrito_federal_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Distrito Federal" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Distrito Federal" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Distrito Federal" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Distrito Federal")
@@ -19889,11 +17861,7 @@ def check_PLACE_12():
         tocantins_polygon = loads(wkt_data)
 
     # Loop through each row in the CSV file
-<<<<<<< HEAD
-    for index, row in df.iterrows():
-=======
     for row in df.iterrows():
->>>>>>> 29e17f6 (Relationship 'contains')
         # Extract latitude and longitude values from the CSV data
         latitude = row["latitude"]
         longitude = row["longitude"]
@@ -19904,44 +17872,29 @@ def check_PLACE_12():
         # Check if the point is inside the Brazil boundary polygon
         if brazil_polygon.contains(point):
             # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-            query = f'MATCH(b:BRAZIL), (l:PLACE) WHERE b.name = "Brasil" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_COUNTRY]->(b)'
-            graph.run(query)
-=======
             query1 = f'MATCH(b:BRAZIL), (l:PLACE) WHERE b.name = "Brasil" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_COUNTRY]->(b)'
             query2 = f'MATCH(b:BRAZIL), (l:PLACE) WHERE b.name = "Brasil" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (b)-[isin:COUNTRY_CONTAINS]->(l)'
             graph.run(query1)
             graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
             print(f"Relationship created for {row['name']} with Brazil")
 
             # Check if the point is inside the Regions and States boundary polygon
             if nordeste_polygon.contains(point):
                 # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                query = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Nordeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
-                graph.run(query)
-=======
                 query1 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Nordeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
                 query2 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Nordeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (r)-[isin:REGION_CONTAINS]->(l)'
                 graph.run(query1)
                 graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                 print(f"Relationship created for {row['name']} with Nordeste")
 
                 if alagoas_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Alagoas" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Alagoas" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Alagoas" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Alagoas")
@@ -19950,15 +17903,10 @@ def check_PLACE_12():
 
                 if bahia_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Bahia" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Bahia" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Bahia" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Bahia")
                 else:
@@ -19966,15 +17914,10 @@ def check_PLACE_12():
 
                 if ceara_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Ceará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Ceará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Ceará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Ceará")
                 else:
@@ -19982,15 +17925,10 @@ def check_PLACE_12():
 
                 if maranhao_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Maranhão" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Maranhão" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Maranhão" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Maranhão")
@@ -19999,15 +17937,10 @@ def check_PLACE_12():
 
                 if paraiba_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraíba" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraíba" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraíba" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Paraíba")
@@ -20016,15 +17949,10 @@ def check_PLACE_12():
 
                 if pernambuco_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pernambuco" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pernambuco" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pernambuco" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Pernambuco")
@@ -20033,15 +17961,10 @@ def check_PLACE_12():
 
                 if piaui_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Piauí" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Piauí" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Piauí" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Piauí")
                 else:
@@ -20049,15 +17972,10 @@ def check_PLACE_12():
 
                 if rio_g_norte_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Rio Grande do Norte")
@@ -20067,15 +17985,10 @@ def check_PLACE_12():
 
                 if sergipe_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Sergipe" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Sergipe" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Sergipe" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Sergipe")
@@ -20086,30 +17999,20 @@ def check_PLACE_12():
 
             if norte_polygon.contains(point):
                 # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                query = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
-                graph.run(query)
-=======
                 query1 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
                 query2 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Norte" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (r)-[contains:REGION_CONTAINS]->(l)'
                 graph.run(query1)
                 graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                 print(f"Relationship created for {row['name']} with Norte")
 
                 # Check if the point is inside the States boundary polygon
                 if acre_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Acre" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Acre" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Acre" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Acre")
                 else:
@@ -20117,15 +18020,10 @@ def check_PLACE_12():
 
                 if amazonas_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amazonas" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amazonas" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amazonas" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Amazonas")
@@ -20134,15 +18032,10 @@ def check_PLACE_12():
 
                 if amapa_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amapá" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amapá" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Amapá" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Amapá")
                 else:
@@ -20150,15 +18043,10 @@ def check_PLACE_12():
 
                 if rondonia_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rondônia" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rondônia" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rondônia" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Rondônia")
@@ -20167,15 +18055,10 @@ def check_PLACE_12():
 
                 if roraima_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Roraima" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Roraima" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Roraima" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Roraima")
@@ -20184,15 +18067,10 @@ def check_PLACE_12():
 
                 if tocantins_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Tocantins" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Tocantins" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Tocantins" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Tocantins")
@@ -20201,15 +18079,10 @@ def check_PLACE_12():
 
                 if para_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Pará" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Pará")
                 else:
@@ -20219,29 +18092,19 @@ def check_PLACE_12():
 
             if sudeste_polygon.contains(point):
                 # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                query = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sudeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
-                graph.run(query)
-=======
                 query1 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sudeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
                 query2 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sudeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (r)-[contains:REGION_CONTAINS]->(l)'
                 graph.run(query1)
                 graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                 print(f"Relationship created for {row['name']} with Sudeste")
 
                 if espirito_santo_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Espírito Santo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Espírito Santo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Espírito Santo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Espírito Santo")
@@ -20251,15 +18114,10 @@ def check_PLACE_12():
 
                 if minas_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Minas Gerais" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Minas Gerais" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Minas Gerais" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Minas Gerais")
@@ -20269,15 +18127,10 @@ def check_PLACE_12():
 
                 if sao_paulo_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "São Paulo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "São Paulo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "São Paulo" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with São Paulo")
@@ -20286,15 +18139,10 @@ def check_PLACE_12():
 
                 if rio_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio de Janeiro" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio de Janeiro" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio de Janeiro" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Rio de Janeiro")
@@ -20307,29 +18155,19 @@ def check_PLACE_12():
 
             if sul_polygon.contains(point):
                 # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                query = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
-                graph.run(query)
-=======
                 query1 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
                 query2 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (r)-[contains:REGION_CONTAINS]->(l)'
                 graph.run(query1)
                 graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                 print(f"Relationship created for {row['name']} with Sul")
 
                 if rio_g_sul_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Rio Grande do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Rio Grande do Sul")
@@ -20339,15 +18177,10 @@ def check_PLACE_12():
 
                 if parana_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraná" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraná" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Paraná" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Paraná")
@@ -20356,15 +18189,10 @@ def check_PLACE_12():
 
                 if santa_catarina_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Santa Catarina" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Santa Catarina" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Santa Catarina" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Santa Catarina")
@@ -20377,30 +18205,20 @@ def check_PLACE_12():
 
             if centro_oeste_polygon.contains(point):
                 # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                query = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Centro-Oeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
-                graph.run(query)
-=======
                 query1 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Centro-Oeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_REGION]->(r)'
                 query2 = f'MATCH(r:REGIONS), (l:PLACE) WHERE r.name = "Centro-Oeste" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (r)-[contains:REGION_CONTAINS]->(l)'
                 graph.run(query1)
                 graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                 print(
                     f"Relationship created for {row['name']} with Centro-Oeste")
 
                 if goias_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Goiás" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Goiás" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Goiás" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(f"Relationship created for {row['name']} with Goiás")
                 else:
@@ -20408,15 +18226,10 @@ def check_PLACE_12():
 
                 if mato_sul_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso do Sul" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Mato Grosso do Sul")
@@ -20426,15 +18239,10 @@ def check_PLACE_12():
 
                 if mato_grosso_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Mato Grosso" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Mato Grosso")
@@ -20444,15 +18252,10 @@ def check_PLACE_12():
 
                 if distrito_federal_polygon.contains(point):
                     # If the point is inside the polygon, create a relationship in Neo4j
-<<<<<<< HEAD
-                    query = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Distrito Federal" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
-                    graph.run(query)
-=======
                     query1 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Distrito Federal" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (l)-[isin:IS_IN_STATE]->(s)'
                     query2 = f'MATCH(s:STATES), (l:PLACE) WHERE s.name = "Distrito Federal" and l.latitude = "{row["latitude"]}" and l.longitude = "{row["longitude"]}" MERGE (s)-[contains:STATE_CONTAINS]->(l)'
                     graph.run(query1)
                     graph.run(query2)
->>>>>>> 29e17f6 (Relationship 'contains')
 
                     print(
                         f"Relationship created for {row['name']} with Distrito Federal")
